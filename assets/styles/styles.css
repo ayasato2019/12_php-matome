@@ -1,0 +1,104 @@
+body {
+	display: flex;
+	align-items: center;
+	justyfi-contents: flex-start;
+}
+
+.inner {
+	margin: 0 auto;
+	width: min(calc(100% - 40px), auto);
+	height: auto;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	align-items: center;
+	justyfi-contents: flex-start;
+	padding: 32px;
+	border-radius: 16px;
+	border: 1px solid #B4D6CD;
+}
+
+.form form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.title {
+	text-align: center;
+}
+
+textarea,
+input {
+	border: 1px solid #D8E0DE;
+	border-radius: 4px;
+	padding: 4px 8px;
+	line-height: 1.6;
+	width: max(300px, 100%);
+}
+
+.question-item {
+	display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.question-item label {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: flex-start;
+	justyfi-contents: center;
+}
+
+.submit-button {
+	border: 1px solid #B4D6CD;
+	background-color: #B4D6CD;
+	color: #FFF;
+	font-weight: bold;
+	margin-top: 16px;
+	padding: 4px 8px;
+	line-height: 1.6;
+	border-radius: 4px;
+	transition: opacity .2s;
+	cursor: pointer;
+}
+
+.submit-button:hover {
+	opacity: .4;
+}
+
+/*-----------------
+	read.php
+------------------*/
+.read-user-list {
+	list-style: "";
+	padding-inline-start: 0px;
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+.read-user-list li {
+	margin-bottom: 16px;
+}
+
+.user-label {
+	font-weight: bold;
+}
+
+.user-label::after {
+	content: ":";
+	padding-right: 8px;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
