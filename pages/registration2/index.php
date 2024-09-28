@@ -43,23 +43,23 @@ if (!$userData) {
 		<form action="./insert.php" method="post">
 			<h2 class="title" data-heading="registran">新規登録</h2>
 			<div class="question-item">
-				<label>
-					<span class="question-title">名前</span>
-					<input type="text" name="name" required>
-				</label>
-				<label>
-					<span class="question-title">メールアドレス</span>
+                <label>
+                    <span class="question-title">名前</span>
+                    <input type="text" name="name" value="<?php echo htmlspecialchars($userData['name']); ?>" required>
+                </label>
+                <label>
+                    <span class="question-title">メールアドレス</span>
                     <input type="email" name="email" value="<?php echo htmlspecialchars($userData['email']); ?>" readonly>
-				</label>
-				<label>
-					<span class="question-title">生年月日</span>
-					<input type="text" name="birthday" required>
-				</label>
-				<label>
-					<span class="question-title">電話番号</span>
-					<input type="text" name="phone" required>
-				</label>
-			</div>
+                </label>
+                <label>
+                    <span class="question-title">生年月日</span>
+                    <input type="text" name="birthday" value="<?php echo htmlspecialchars($userData['birthday']); ?>" required>
+                </label>
+                <label>
+                    <span class="question-title">電話番号</span>
+                    <input type="text" name="phone" value="<?php echo htmlspecialchars($userData['phone']); ?>" required>
+                </label>
+            </div>
 			<button type="submit" class="submit-button">登録</button>
 		</form>
 	</div>
