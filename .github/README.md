@@ -6,8 +6,8 @@
 
 ## ③DEMO
 
-[!https://borderlesss.sakura.ne.jp/08_form/php/](登録画面)
-[!https://borderlesss.sakura.ne.jp/08_form/php/read.php](確認画面)
+[!https://borderlesss.sakura.ne.jp/09_database/pages/pre_registration/](別DB)
+[!https://borderlesss.sakura.ne.jp/09_database/pages/pre_registration2/](上書き)
 
 ## ⑤工夫した点・こだわった点
 
