@@ -1,9 +1,5 @@
 <?php
 // サーバー情報
-$host = "mysql3101.db.sakura.ne.jp";
-$dbName = "borderlesss_gspractice";
-$user = "borderlesss_gspractice";
-$password = "ADLYWIK8pVU8_";
 $dsn = "mysql:host={$host};dbname={$dbName};charser=utf8";
 
 // フォーム登録内容
