@@ -10,7 +10,7 @@
 <body>
     
     <div class="form inner">
-	<a href="./pages/pre_registration/">仮登録画面はこちら</a>
+	<a href="./pages/pre_registration2/">仮登録画面はこちら</a>
     </div>
 </body>
 </html>
