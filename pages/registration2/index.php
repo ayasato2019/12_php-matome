@@ -1,20 +1,19 @@
 <?php
 session_start();
-
-// DB接続情報
-$dsn = "mysql:host={$host};dbname={$dbName};charset=utf8";
+$token = $_GET['token'];
+if (!$token) {
+    exit('メールアドレスが登録されていません。');
+}// else if (!$tokenulr = $token) {
+//    exit('ユーザーが一致しません。');
+//}
 
 // DB接続
-try {
-    $pdo = new PDO($dsn, $user, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    exit('DB_CONNECT_ERROR: ' . $e->getMessage());
-}
+include("../../assets/libs/functions.php");
+$pdo = db_conn();
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // セッションからメールアドレスを取得
 $email = $_SESSION['email'];
-$token = $_GET['token'];
 
 // トークンを使ってユーザーのデータを取得
 $sql = "SELECT * FROM gs_an_db WHERE token = :token";

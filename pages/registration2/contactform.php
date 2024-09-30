@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../assets/styles/reset.css">
 	<link rel="stylesheet" href="../../assets/styles/styles.css">
-	<title>新規登録</title>
+	<title>本登録完了</title>
 </head>
 <body>
 
