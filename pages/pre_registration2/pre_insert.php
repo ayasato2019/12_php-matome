@@ -35,6 +35,9 @@ if ($status === false) {
     exit('データベースエラーが発生しました。');
 }
 
+// メールアドレスのサニタイズ
+$email = htmlspecialchars($email);
+
 // サーバーのメール設定
 $sender = "プロダクト2事務局";
 $mailFrom = "info@yourdomain.com";  // 送信元のメールアドレス（設定が必要）
