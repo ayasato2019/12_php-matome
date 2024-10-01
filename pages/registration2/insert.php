@@ -1,7 +1,9 @@
 <?php
 
 include("../../assets/libs/functions.php");
+$pdo = db_conn();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 // フォームからのデータを受け取る
 $name = $_POST['name'];

@@ -1,20 +1,12 @@
 <?php
 // サーバー情報
-$host = "mysql3101.db.sakura.ne.jp";
-$dbName = "borderlesss_gspractice";
-$user = "borderlesss_gspractice";
-$password = "ADLYWIK8pVU8_";
-$dsn = "mysql:host={$host};dbname={$dbName};charser=utf8";
+include("../../assets/libs/functions.php");
+$pdo = db_conn();
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// サーバーのデータベースに接続
-try {
-	$pdo = new PDO($dsn, $user, $password);
-} catch (PDOException $e) {
-	exit('DB_CONECT:' .$e->getMessage());
-}
 
 // データ登録SQL
-$sql = "SELECT * FROM gs_an_table";
+$sql = "SELECT * FROM gs_an_db";
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 
@@ -43,7 +35,6 @@ $values = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h2 class="title" data-heading="registran">ユーザ一覧</h2>
 		<?php foreach ($values as $value) { ?>
 			<div class="flex">
-				<p><?= htmlspecialchars($value["id"]) ?></p>
 				<p><?= htmlspecialchars($value["name"]) ?></p>
 				<p><?= htmlspecialchars($value["email"]) ?></p>
 			</div>
