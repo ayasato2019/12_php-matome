@@ -45,7 +45,7 @@ $replyTo = "info@yourdomain.com";   // 返信先のメールアドレス（設�
 
 // メールの件名と本文
 $subjectUser = "ご登録ありがとうございます";
-$url = "https://borderlesss.sakura.ne.jp/09_database/pages/registration2/index.php?token=" . urlencode($tokenid);
+$url = "https://borderlesss.sakura.ne.jp/10_edit/pages/registration2/index.php?token=" . urlencode($tokenid);
 $messageUser = <<<EOD
 ご登録ありがとうございます。以下のリンクをクリックして手続きを完了してください。
 

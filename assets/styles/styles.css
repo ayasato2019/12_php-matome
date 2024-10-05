@@ -97,6 +97,7 @@ input {
 .flex {
 	display: flex;
 	flex-wrap: nowrap;
+	gap: 32px;
 }
 
 .mt-20 {

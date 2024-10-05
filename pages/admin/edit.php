@@ -28,12 +28,12 @@ if($status==false) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../../assets/styles/reset.css">
 	<link rel="stylesheet" href="../../assets/styles/styles.css">
-	<title>新規登録</title>
+	<title>ユーザー情報編集</title>
 </head>
 <body>
 	
 	<div class="form inner">
-		<form action="./insert.php" method="post">
+		<form action="../registration2/insert.php" method="post">
         <input type="hidden" name="number" value="<?=$row["number"]?>">
         <input type="hidden" name="token" value="<?=$row["token"]?>">
 			<h2 class="title" data-heading="registran">新規登録</h2>
