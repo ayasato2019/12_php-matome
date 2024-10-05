@@ -6,17 +6,17 @@
 
 ## ③DEMO
 
-[!https://borderlesss.sakura.ne.jp/09_database/pages/pre_registration/](別DB)
-[!https://borderlesss.sakura.ne.jp/09_database/pages/pre_registration2/](上書き)
+[!https://borderlesss.sakura.ne.jp/10_edit/pages/pre_registration2/]
 
 ## ⑤工夫した点・こだわった点
 
 - UUIDを発行してURLに紐付けることで、メールアドレスの再記入を省略できるようにした
-- 第一弾はDBを分けて、第二弾はDBの上書きをする形にした
+- 新規登録ページはメアドが変更できない仕様になっている。
+- 管理者ページでは名前をクリックで編集へ行ける。
+- 前回うまくいかなかった上書きも削除もうまくいった。
 
 ## ⑥難しかった点・次回トライしたいこと(又は機能)
 
-- 自動返信のせいか、gmailだと受信ができない
-- tokenと紐付けてURLの作成はできたけど、上書きがうまくいかない
+- 登録用URLの発行後1時間以内に登録しないと無効になる仕様を作りたい
 
 ##　参考資料

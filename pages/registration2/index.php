@@ -30,8 +30,7 @@ if($status==false) {
 	<link rel="stylesheet" href="../../assets/styles/styles.css">
 	<title>新規登録</title>
 </head>
-<body>
-	
+<body class="wrap">
 	<div class="form inner">
 		<form action="./insert.php" method="post">
         <input type="hidden" name="number" value="<?=$row["number"]?>">

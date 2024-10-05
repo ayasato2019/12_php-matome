@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="../../assets/styles/styles.css">
     <title>新規登録</title>
 </head>
-<body>
-
+<body class="wrap">
 	<div class="form inner">
 		<h2 class="title" data-heading="registran">登録用メールを送信しました。</h2>
 		<p class="mt-20">メールアドレスが間違っているトラブルが多発しています。<br>24時間以内にメールが届かない時は、再度登録をお願いします。</p>

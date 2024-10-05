@@ -7,8 +7,7 @@
 	<link rel="stylesheet" href="../../assets/styles/styles.css">
 	<title><?php echo $title; ?></title>
 </head>
-<body>
-    
+<body class="wrap">
     <div class="form inner">
         <form action="./pre_insert.php" method="post">
             <h2 class="title" data-heading="registran">新規登録</h2>

@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <title>新規登録</title>
 </head>
-<body>
-    
+<body class="wrap">
     <div class="form inner">
 	<a href="./pages/pre_registration2/">仮登録画面はこちら</a>
     </div>

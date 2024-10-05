@@ -1,7 +1,23 @@
-body {
+.wrap {
 	display: flex;
 	align-items: center;
 	justyfi-contents: flex-start;
+	width: 100%;
+	height: 100vh;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+    justify-content: flex-end;
+	width: 100%;
+	padding: 8px 16px;
+	background-color: #B4D6CD;
+}
+
+.nav-link {
+	font-weight: bold;
+	color: #FFF;
 }
 
 .inner {
@@ -72,7 +88,7 @@ input {
 }
 
 /*-----------------
-	read.php
+	admin.php
 ------------------*/
 .read-user-list {
 	list-style: "";
@@ -97,9 +113,14 @@ input {
 .flex {
 	display: flex;
 	flex-wrap: nowrap;
-	gap: 32px;
+	gap: 16px;
 }
 
 .mt-20 {
 	margin-top: 20px;
+}
+
+.user-item a {
+	text-decoration: none;
+	color: currentColor;
 }

@@ -31,32 +31,36 @@ if($status==false) {
 	<title>ユーザー情報編集</title>
 </head>
 <body>
-	
-	<div class="form inner">
-		<form action="../registration2/insert.php" method="post">
-        <input type="hidden" name="number" value="<?=$row["number"]?>">
-        <input type="hidden" name="token" value="<?=$row["token"]?>">
-			<h2 class="title" data-heading="registran">新規登録</h2>
-			<div class="question-item">
-                <label>
-                    <span class="question-title">名前</span>
-                    <input type="text" name="name" value="<?=$row["name"]?>" required>
-                </label>
-                <label>
-                    <span class="question-title">メールアドレス</span>
-                    <input type="email" name="email" value="<?=$row["email"]?>" readonly>
-                </label>
-                <label>
-                    <span class="question-title">生年月日</span>
-                    <input type="text" name="birthday" value="<?=$row["birthday"]?>" required>
-                </label>
-                <label>
-                    <span class="question-title">電話番号</span>
-                    <input type="text" name="phone" value="<?=$row["phone"]?>" required>
-                </label>
-            </div>
-			<button type="submit" class="submit-button">登録</button>
-		</form>
+	<header class="header">
+		<a href="../admin/index.php" class="nav-link">管理者ページへ戻る</a>
+	</header>
+	<div class="wrap">
+		<div class="form inner">
+			<form action="../registration2/insert.php" method="post">
+			<input type="hidden" name="number" value="<?=$row["number"]?>">
+			<input type="hidden" name="token" value="<?=$row["token"]?>">
+				<h2 class="title" data-heading="registran">ユーザー情報編集</h2>
+				<div class="question-item">
+					<label>
+						<span class="question-title">名前</span>
+						<input type="text" name="name" value="<?=$row["name"]?>" required>
+					</label>
+					<label>
+						<span class="question-title">メールアドレス</span>
+						<input type="email" name="email" value="<?=$row["email"]?>" readonly>
+					</label>
+					<label>
+						<span class="question-title">生年月日</span>
+						<input type="text" name="birthday" value="<?=$row["birthday"]?>" required>
+					</label>
+					<label>
+						<span class="question-title">電話番号</span>
+						<input type="text" name="phone" value="<?=$row["phone"]?>" required>
+					</label>
+				</div>
+				<button type="submit" class="submit-button">登録</button>
+			</form>
+		</div>
 	</div>
 </body>
 </html>
