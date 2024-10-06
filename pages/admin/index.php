@@ -37,8 +37,8 @@ $json = json_encode($values,JSON_UNESCAPED_UNICODE);
 		<div class="form inner" style="align-items: flex-start;">
 			<h2 class="title" data-heading="registran">ユーザ一覧</h2>
 			<ul class="user-list">
-				<li class="user-item flex">
 				<?php foreach ($values as $value) { ?>
+				<li class="user-item flex">
 					<p><?= h($value["number"]) ?></p>
 					<a href="../registration2/index.php?token=<?= h($value["token"])?>">
 						<p><?= h($value["name"]) ?></p>
@@ -61,8 +61,8 @@ $json = json_encode($values,JSON_UNESCAPED_UNICODE);
 							</g>
 						</svg>
 					</a>
-					<?php } ?>
 				</li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>
