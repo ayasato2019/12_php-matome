@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // サーバー情報
 include("../../assets/libs/functions.php");
 $pdo = db_conn();
