@@ -1,10 +1,10 @@
 <?php
-//エラーログ取得
+// エラーログ取得
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-//データの取得
+// データの取得
 $name = $_POST['name'];
 $lid = $_POST['id'];
 $lpw = password_hash($_POST['password'], PASSWORD_DEFAULT); // パスワードをハッシュ化
@@ -30,20 +30,25 @@ $stmt->bindValue(':lid', $lid, PDO::PARAM_STR);
 $stmt->bindValue(':lpw', $lpw, PDO::PARAM_STR);
 $stmt->bindValue(':tokenid', $tokenid, PDO::PARAM_STR);
 
-// SQL実行
-$status = $stmt->execute();
+try {
+    // SQL実行
+    $stmt->execute();
+    
+    // 影響を受けた行数を取得
+    $rowsAffected = $stmt->rowCount();
 
-// SQL実行後の処理
-if ($status == false) {
-    $error = $stmt->errorInfo();
-    echo 'SQL_ERROR:' . $error[2];
-    exit();
-} else {
+    // SQL実行後の処理
     if ($rowsAffected > 0) {
+        // データが正常に登録された場合
         header("Location: ./index.php");
         exit();
     } else {
-        echo 'データが更新されませんでした（既に同じ値の可能性があります）';
+        // データが登録されなかった場合
+        echo "データの登録に失敗しました。";
     }
+} catch (PDOException $e) {
+    // SQL実行時にエラーが発生した場合
+    echo 'SQL_ERROR:' . htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8');
+    exit();
 }
 ?>

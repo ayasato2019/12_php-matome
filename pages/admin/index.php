@@ -37,10 +37,10 @@ $json = json_encode($values,JSON_UNESCAPED_UNICODE);
 </head>
 <body>
 	<header class="header">
-		<p>ようこそ<?= htmlspecialchars($admin, ENT_QUOTES, 'UTF-8') ?></p>
+		<p class="wellcome-message">ようこそ<span class="admin-name"><?= htmlspecialchars($admin, ENT_QUOTES, 'UTF-8') ?></span>さん</p>
 		<a href="../admin/index.php" class="nav-link">管理者ページ</a>
 	</header>
-	<div class="wrap">
+	<main class="wrap">
 		<div class="form inner" style="align-items: flex-start;">
 			<h2 class="title" data-heading="registran">ユーザ一覧</h2>
 			<ul class="user-list">
@@ -71,7 +71,8 @@ $json = json_encode($values,JSON_UNESCAPED_UNICODE);
 				</li>
 				<?php } ?>
 			</ul>
+			<a href="./add.php" class="text-link">管理者新規登録</a>
 		</div>
-	</div>
+	</main>
 </body>
 </html>

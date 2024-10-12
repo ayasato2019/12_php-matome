@@ -1,4 +1,10 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+session_start();
+$admin = $_SESSION["name"];
+
 $token = $_GET['token'];
 
 // DB接続
@@ -32,9 +38,10 @@ if($status==false) {
 </head>
 <body>
 	<header class="header">
-		<a href="../admin/index.php" class="nav-link">管理者ページへ戻る</a>
+		<p class="wellcome-message">ようこそ<span class="admin-name"><?= htmlspecialchars($admin, ENT_QUOTES, 'UTF-8') ?></span>さん</p>
+		<a href="../admin/index.php" class="nav-link">管理者ページ</a>
 	</header>
-	<div class="wrap">
+	<main class="wrap">
 		<div class="form inner">
 			<form action="../registration2/insert.php" method="post">
 			<input type="hidden" name="number" value="<?=$row["number"]?>">
@@ -61,6 +68,6 @@ if($status==false) {
 				<button type="submit" class="submit-button">登録</button>
 			</form>
 		</div>
-	</div>
+	</main>
 </body>
 </html>

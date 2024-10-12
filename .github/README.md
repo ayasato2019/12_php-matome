@@ -5,8 +5,10 @@
 - 新規登録のためにアドレスを登録すると自動返信が来て本登録ができる
 
 ## ③DEMO
+管理者ログインページ
+[!https://borderlesss.sakura.ne.jp/11_login/pages/login/]https://borderlesss.sakura.ne.jp/11_login/pages/login/ 
 
-[!https://borderlesss.sakura.ne.jp/10_edit/pages/pre_registration2/]
+管理者追加ページ
 
 ## ⑤工夫した点・こだわった点
 

@@ -9,7 +9,7 @@
 .header {
 	display: flex;
 	align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 	width: 100%;
 	padding: 8px 16px;
 	background-color: #B4D6CD;
@@ -123,4 +123,22 @@ input {
 .user-item a {
 	text-decoration: none;
 	color: currentColor;
+}
+
+.wellcome-message {
+	color: #FFF;
+	font-size:14px;
+	font-weight: 400;
+}
+
+.admin-name {
+	padding: 0 4px;
+	font-size:16px;
+	color: #FFF;
+	font-weight: 700;
+}
+
+.text-link {
+	margin-top: 40px;
+	color: #B4D6CD;
 }
