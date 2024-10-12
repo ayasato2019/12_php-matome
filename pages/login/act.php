@@ -4,8 +4,21 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 
-$lid = $_SESSION["id"];
-$lpw = $_SESSION["password"];
+// $lid = $_SESSION["id"];
+// $lpw = $_SESSION["password"];
+
+//これでもいけるけど
+// $lid = $_POST["id"];
+// $lpw = $_POST["password"];
+
+// フォームから送信されたIDとパスワードを取得
+$lid = isset($_POST['id']) ? $_POST['id'] : null; // POSTデータから取得
+$lpw = isset($_POST['password']) ? $_POST['password'] : null; // POSTデータから取得
+
+
+// echo "ユーザーID: " . htmlspecialchars($lid, ENT_QUOTES, 'UTF-8') . "<br>";
+// echo "パスワード: " . htmlspecialchars($lpw, ENT_QUOTES, 'UTF-8') . "<br>";
+// exit();
 
 // サーバー情報
 include("../../assets/libs/functions.php");
