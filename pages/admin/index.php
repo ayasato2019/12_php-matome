@@ -1,5 +1,6 @@
 <?php
 session_start();
+$admin = $_SESSION["name"];
 
 // サーバー情報
 include("../../assets/libs/functions.php");
@@ -32,7 +33,8 @@ $json = json_encode($values,JSON_UNESCAPED_UNICODE);
     <title>ユーザー一覧</title>
 </head>
 <body>
-<header class="header">
+	<header class="header">
+		<p>ようこそ<?= htmlspecialchars($admin, ENT_QUOTES, 'UTF-8') ?></p>
 		<a href="../admin/index.php" class="nav-link">管理者ページ</a>
 	</header>
 	<div class="wrap">
