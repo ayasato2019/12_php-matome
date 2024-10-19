@@ -22,7 +22,8 @@ $pdo = db_conn();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // POSTデータの取得（liの数だけデータが送信される）
-$li_count = max(count($_POST['user_name']), (int)1);
+// $li_count = max(count($_POST['user_name']), (int)1);
+$li_count = 0;
 
 // 最大8ユーザーの情報を繰り返し取得・登録
 function addSql($list_count) {
@@ -61,7 +62,7 @@ function addSql($list_count) {
     }
 
     // 次のユーザーの登録
-    if ($list_count != 0) { // 最大8回の登録を制限
+    if ($list_count <= 7) { // 最大8回の登録を制限
         addSql($list_count - 1); // ここで再帰的に次のユーザーを登録
     }
 }
