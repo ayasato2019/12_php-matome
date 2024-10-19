@@ -1,21 +1,21 @@
 # ①課題番号-プロダクト名
-新規ユーザーメール登録画面
+新規グループ・ユーザー登録画面
 
 ## ②課題内容（どんな作品か）
 - 新規登録のためにアドレスを登録すると自動返信が来て本登録ができる
-- 管理者のみが新しい管理者を登録できる
+- まずグループを登録し、代表管理者を登録する
 
 ## ③DEMO
 管理者ログインページ
-[!https://borderlesss.sakura.ne.jp/11_login/pages/login/]https://borderlesss.sakura.ne.jp/11_login/pages/login/ 
+[!https://borderlesss.sakura.ne.jp/12_phpmatome/]https://borderlesss.sakura.ne.jp/12_phpmatome/ 
 
 
 ## ⑤工夫した点・こだわった点
 
-- 管理画面の間のみ管理者の名前を常にheaderに記載した
+- token_idだけでなく、CSRFトークンの生成と、適宜session_idをリセットてより強固なセキュリティにした。
 
 ## ⑥難しかった点・次回トライしたいこと(又は機能)
 
-- 登録用URLの発行後1時間以内に登録しないと無効になる仕様を作りたい
+- 複数人を同時に登録する仕様にしたいけど、制御がうまくいかない（提出時は再帰関数にしてみた）
 
 ##　参考資料
