@@ -47,19 +47,39 @@
 	text-align: center;
 }
 
+button {
+	cursor: pointer;
+	border: 0;
+    background: transparent;
+    padding-block: 1px;
+    padding-inline: 0px;
+}
+
+select,
 textarea,
 input {
 	border: 1px solid #D8E0DE;
 	border-radius: 4px;
 	padding: 4px 8px;
 	line-height: 1.6;
+	height: 100%;
+	max-width: 100%;
+}
+
+textarea,
+input {
 	width: max(300px, 100%);
 }
 
+.question-wrap,
 .question-item {
 	display: flex;
     flex-direction: column;
     gap: 32px;
+}
+
+.question-item.flex {
+    flex-direction: row;
 }
 
 .question-item label {
@@ -81,6 +101,7 @@ input {
 	border-radius: 4px;
 	transition: opacity .2s;
 	cursor: pointer;
+	text-align: center;
 }
 
 .submit-button:hover {
@@ -141,4 +162,32 @@ input {
 .text-link {
 	margin-top: 40px;
 	color: #B4D6CD;
+}
+
+.text-link-add {
+	position: relative;
+	margin-top: 40px;
+	color: #B4D6CD;
+	border: 0;
+    background: transparent;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 0px;
+	text-align: right;
+}
+
+.w-70 {
+	width: min(calc(70% - 16px), 300px);
+}
+
+.w-30 {
+	width: 30%;
+}
+
+.justify-between {
+	justify-content: space-between
+}
+
+.text-center {
+	text-align: center;
 }

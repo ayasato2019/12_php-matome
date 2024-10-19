@@ -1,4 +1,14 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+session_start();
+$admin = $_SESSION["name"];
+if (!isset($_SESSION['name'])) {
+    // 'name' が設定されていない場合はログインページへリダイレクト
+    header("Location: ../login/index.php");
+    exit();  // スクリプトの実行を停止
+}
 $token = $_GET["token"];
 
 //2. DB接続します
