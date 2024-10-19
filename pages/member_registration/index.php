@@ -64,10 +64,10 @@ if ($status === false) {
             <ul id="member_registration" class="question-list">
                 <li class="question-item mt-20 flex justify-between" data-user="1">
                     <label class="w-70">
-                        <input type="text" name="user_name" placeholder="例）ニックネーム" required>
+                        <input type="text" name="user_name[]" placeholder="例）ニックネーム" required>
                     </label>
                     <label class="w-30" for="role">
-                        <select name="parent" id="parent">
+                        <select name="parent[]" id="parent">
                             <option value="0" selected>管理者</option>
                             <option value="1">メンバー</option>
                         </select>
