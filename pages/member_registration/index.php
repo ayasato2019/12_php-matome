@@ -62,7 +62,7 @@ if ($status === false) {
             <h1 class="title" data-heading="registran">グループを登録しました</h1>
             <p class="text-center">続けてメンバーアカウントを作成します。</p>
             <ul id="member_registration" class="question-list">
-                <li class="question-item mt-20 flex justify-between">
+                <li class="question-item mt-20 flex justify-between" data-user="1">
                     <label class="w-70">
                         <input type="text" name="user_name" placeholder="例）ニックネーム" required>
                     </label>
@@ -78,5 +78,15 @@ if ($status === false) {
             <button type="submit" class="submit-button">登録</button>
         </form>
     </div>
+<script>
+    const memberList = document.getElementById('member_registration');
 
+    memberList.addEventListener('click', (event) => {
+        const li = event.target.closest('.question-item'); // クリックされたliを取得
+        if (li) {
+            const userId = li.getAttribute('data-user'); // data-userを取得
+            console.log(userId); // 取得した値を表示
+        }
+    });
+</script>
 <?php include("../../assets/components/footer.php"); ?>

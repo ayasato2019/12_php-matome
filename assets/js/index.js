@@ -1,23 +1,34 @@
 import addForm from './add_member-form';
 
-// addForm クリックイベントリスナー
 const addButton = document.querySelector('.text-link-add');
 const memberList = document.getElementById('member_registration');
-let count = 0;
+const form = document.querySelector('form');
 
+// hiddenフィールドを作成
+const memberCountInput = document.createElement('input');
+memberCountInput.type = 'hidden';
+memberCountInput.name = 'member_count'; // PHPで取得する際の名前
+form.appendChild(memberCountInput); // フォームに追加
+
+let count = 1; // すでに一人は必須項目としてあるから
+memberCountInput.value = count; // 初期値を設定
 
 addButton.addEventListener('click', () => {
 	count++;
+	memberCountInput.value = count; // 現在のカウントをhiddenフィールドに設定
+
 	const memberCount = memberList.children.length; // 現在のメンバー数を取得
+
 	if (memberCount < 8) { // 最大8人まで追加
 		const newMember = document.createElement('li');
-		newMember.className = 'question-item mt-20 flex justify-between';
+		newMember.className = `question-item mt-20 flex justify-between`;
+		newMember.setAttribute('data-user', count);
 		newMember.innerHTML = `
 			<label class="w-70">
-				<input type="text" name="user_name" placeholder="例）ニックネーム">
+				<input type="text" name="user_name[]" placeholder="例）ニックネーム">
 			</label>
 			<label class="w-30" for="role">
-				<select name="parent" id="parent">
+				<select name="parent[]" id="parent">
 					<option value="0">管理者</option>
 					<option value="1" selected>メンバー</option>
 				</select>
@@ -47,14 +58,15 @@ addButton.addEventListener('click', () => {
 	}
 });
 
+// 削除ボタンのイベントリスナー
 document.addEventListener('click', (event) => {
-    // クリックされた要素がボタンであるか確認
     const button = event.target.closest('.button_trash'); // ボタンを取得
     if (button) {
         const questionItem = button.closest('.question-item'); // 親要素の.question-itemを取得
         if (questionItem) {
             questionItem.remove(); // 親要素を削除
+            count--; // メンバーを一人削除したのでカウントを減らす
+            memberCountInput.value = count; // 現在のカウントをhiddenフィールドに設定
         }
     }
 });
-
